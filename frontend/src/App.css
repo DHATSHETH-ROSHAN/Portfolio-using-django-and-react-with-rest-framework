@@ -1,0 +1,110 @@
+.App {
+  text-align: center;
+  background: linear-gradient(120deg, #0e0d0d, #300266 ,  #3e0283);
+
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+  font-family: "Inter", system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+body {
+  --scrollY: 0;
+  background: radial-gradient(
+      1200px circle at 50% calc(20% + var(--scrollY)),
+      rgba(160, 0, 255, 0.25),
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      #000000,
+      #09000f,
+      #12001f
+    );
+  background-attachment: fixed;
+  /* color: #ffffff; */
+  transition: background-position 0.1s linear;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  /* background-image: url("https://grainy-gradients.vercel.app/noise.svg"); */
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+
+section {
+
+  padding: 40px 20px;
+  position: relative;  
+}
+
+h1, h2 {
+  background: linear-gradient(90deg, #c77dff, #9d4edd) ;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(circle at 20% 20%,rgba(168, 85, 247, 0.35),transparent 40%),radial-gradient(circle at 80% 60%,rgba(124, 58, 237, 0.35),transparent 45%),linear-gradient(180deg, #000000, #0b0014);
+  filter: blur(60px);
+  opacity: 0.8;
+  transition: background-position 0.1s linear;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* .App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+
+
+
+/* Moving neon background */
+

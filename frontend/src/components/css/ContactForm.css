@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.contact-container {
+  max-width: 520px;
+  margin: 80px auto;
+  padding: 45px;
+
+  background: linear-gradient(120deg, #0e0d0d, #021466, #023683);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(59, 130, 246, 0.25);
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+
+}
+
+.contact-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+
+  background: linear-gradient(90deg, #60a5fa, #2563eb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+}
+
+.comtact-status {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: #bfdbfe;
+
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  color: #e0f2fe;
+
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+.contact-form textarea {
+    resize: none;
+    min-height: 120px;
+
+}
+
+.contact-form input:hover,
+.contact-form textarea:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.35);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.35),
+    0 0 12px rgba(59, 130, 246, 0.45);
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(224, 242, 254, 0.5);
+}
+
+.contact-form button {
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #60a5fa, #2563eb);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25 ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.45);
+}
+
+.contact-form button:active {
+    transform: translateY(0);
+}
+
