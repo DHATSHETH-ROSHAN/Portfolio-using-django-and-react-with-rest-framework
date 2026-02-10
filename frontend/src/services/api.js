@@ -8,3 +8,5 @@ export const getProjects = () => API.get("projects/");
 export const getSkills = () => API.get("skills/");
 export const getContacts = () => API.get("contacts/");
 export const postContact = (data) => API.post("contacts/", data);
+export const getCertifications = () => API.get("certifications/");
+

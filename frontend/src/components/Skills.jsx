@@ -34,7 +34,7 @@ function Skills ({skills}) {
 const getLevelColor = (p) => {
   if(p < 40) return "#22c55e";       // beginner
   if(p < 70) return "#f59e0b";       // intermediate
-  return "#6366f1";                   // advanced
+  return "#438de2";                   // advanced
 }
 
 

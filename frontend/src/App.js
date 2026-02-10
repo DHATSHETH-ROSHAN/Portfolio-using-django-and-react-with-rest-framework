@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getProjects, getSkills } from "./services/api";
+import "./App.css";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Skills from "./components/Skills";
@@ -40,7 +41,7 @@ function App() {
         <Projects projects={projects}/>
         <Skills skills={skills}/>
         <Certifications/>
-        <ContactForm />
+        <ContactForm/>
     </div>
   );
 }

@@ -19,6 +19,7 @@ from django.urls import path, include
 from rest_framework import routers
 from projects.views import ProjectViewSet, SkillViewSet
 from contacts.views import ContactMessageViewSet
+from certifications.views import CertificationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -26,6 +27,7 @@ router = routers.DefaultRouter()
 router.register(r'projects', ProjectViewSet)
 router.register(r'skills', SkillViewSet)
 router.register(r'contacts', ContactMessageViewSet)
+router.register(r'certifications', CertificationViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
