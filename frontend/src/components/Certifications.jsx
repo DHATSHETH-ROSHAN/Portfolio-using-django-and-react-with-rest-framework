@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useEffect, useState } from "react";
+import { getCertifications } from "../services/api";
 import "./css/Certifications.css";
 
-const certifications = [
+const fallbackcertifications = [
     {
         title: "IBM Data Analyst Professional Certificate",
         details: [
@@ -33,6 +34,22 @@ const certifications = [
 ];
 
 function Certifications() {
+  const [certifications, setCertifications ] = useState(fallbackcertifications);
+
+  useEffect(() => {
+    getCertifications()
+    .then(res => {
+      if (res.data && res.data.length > 0) {
+        setCertifications(res.data);
+      } else {
+        console.log("API empty -> using fallback");
+      }
+    })
+    .catch(err => {
+      console.warn("Api failed => using fallback", err);
+
+    });
+  }, []);
     return (
         <section className="certifications">
             <h2>Certifications & Learning</h2>
@@ -43,10 +60,15 @@ function Certifications() {
                     <div className="cert-card" key={index}>
                         <h3>{cert.title}</h3>
                         <ul>
-                        {cert.details.map((item, i) => (
+                        {cert.details?.map((item, i) => (
                             <li key={i}>{item}</li>
                         ))}
                         </ul>
+                        {cert.credential_url && (
+                          <a href={cert.credential_url} target="blank" rel="noreferrer" className="cert-link">
+                            View Certificate
+                          </a>
+                        )}
                     </div>
                     ))}
                 </div>

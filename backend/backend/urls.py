@@ -18,7 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from projects.views import ProjectViewSet, SkillViewSet
-from contacts.views import ContactMessageViewSet
+from contacts.views import ContactMessageViewSet, send_contact_email
 from certifications.views import CertificationViewSet
 from django.conf import settings
 from django.conf.urls.static import static
@@ -32,7 +32,8 @@ router.register(r'certifications', CertificationViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path("send-email/", send_contact_email)
 ]
 
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

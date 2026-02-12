@@ -9,4 +9,7 @@ export const getSkills = () => API.get("skills/");
 export const getContacts = () => API.get("contacts/");
 export const postContact = (data) => API.post("contacts/", data);
 export const getCertifications = () => API.get("certifications/");
+export const sendEmail = (data) =>
+  axios.post("http://127.0.0.1:8000/send-email/", data);
+
 
