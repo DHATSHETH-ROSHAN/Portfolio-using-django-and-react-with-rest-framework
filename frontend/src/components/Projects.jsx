@@ -16,14 +16,14 @@ function Projects ({ projects }) {
                             <h3>{project.title}</h3>
                             <p>{project.description}</p>
 
-                            {project.project_tech?.length > 0 && (
-                            <div className="project-tech">
-                                {project.project_tech?.map((tech,index) => (
+                                {Array.isArray(project.project_tech) && project.project_tech.length > 0 && (
+                                <div className="project-tech">
+                                    {project.project_tech.map((tech, index) => (
                                     <span key={index}>{tech}</span>
-                                ))}
-                            </div>
-                            )}
-                            
+                                    ))}
+                                </div>
+                                )}
+
                             <div className="project-links">
                                 {project.github_link && (
                                     <a href={project.github_link} target="_blank" rel="noreferrer">

@@ -15,8 +15,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [projects, setProjects] = useState([]);
   const [skills, setSkills] = useState([]);
+  const [confirmed, setConfirmed] = useState(false);
+
 
   useEffect(() => {
+    if (!confirmed) return;
+
     Promise.all([getProjects(), getSkills()])
       .then(([projRes, skillRes]) => {
         setProjects(projRes.data);
@@ -34,7 +38,33 @@ function App() {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [confirmed]);
+
+  if (!confirmed) {
+    return (
+      <div className="startup-alert">
+        <div className="startup-box">
+          <h2>⚠ Project Setup Notice</h2>
+          <p>
+            If you cloned this project, kindly install dependencies properly.
+            <br /><br />
+            Built using:
+            <br />
+            <strong>React — Frontend</strong>
+            <br />
+            <strong>Django — Backend</strong>
+            <br />
+            <strong>PostgreSQL — Database</strong>
+          </p>
+
+          <button onClick={() => setConfirmed(true)}>
+            Confirm & Continue
+          </button>
+        </div>
+      </div>
+    )
+  }
+
 
   if (loading) return <Loader />;
 
