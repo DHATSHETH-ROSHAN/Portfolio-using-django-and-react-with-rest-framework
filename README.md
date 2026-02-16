@@ -5,31 +5,49 @@ This project showcases personal projects, skills, and profile information throug
 
 ---
 
-## Tech Stack
+## 🚀 Tech Stack
 
-Backend:
+### Backend
 - Django
 - Django REST Framework
 - PostgreSQL
+- Python
 
-Frontend:
+### Frontend
 - React
 - Axios
 - CSS
 
+### Tools
+- Git & GitHub
+- npm
+- Virtual Environment (venv)
+
 ---
 
-## Features
+## ✨ Features
 
 - Portfolio project showcase
-- Skills display
-- REST API integration
-- Responsive UI
-- Admin dashboard (Django admin)
-- PostgreSQL database
+- Skills management system
+- REST API powered backend
+- Dynamic React frontend
+- Admin dashboard (Django Admin)
+- PostgreSQL database integration
+- Responsive user interface
+- Clean modular project structure
 
 ---
 
+## 📂 Project Structure
+
+portfolio-project/
+│
+├── backend/      → Django backend API
+├── frontend/     → React frontend app
+├── README.md
+└── requirements.txt
+
+---
 ## Installation Guide
 
 ### Clone repository
